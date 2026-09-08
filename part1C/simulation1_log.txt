@@ -1,0 +1,23 @@
+=== Part 1-C Simulation 1: Battleship Moving Path (with % damage) ===
+
+--- Iteration 1: B at (39.11, 436.22) ---
+Cumulative damage on B: 30.00%
+  E1 hit at t=115.3283 s
+  E2 hit at t=115.3283 s
+  E3 hit at t=115.3283 s
+  E4 hit at t=115.3283 s
+  E5 hit at t=115.3283 s
+
+--- Iteration 2: B at (235.37, 523.71) ---
+Cumulative damage on B: 30.00%
+
+--- Iteration 3: B at (356.22, 571.55) ---
+Cumulative damage on B: 30.00%
+
+--- Iteration 4: B at (834.58, 389.18) ---
+Cumulative damage on B: 30.00%
+
+--- Iteration 5: B at (794.12, 239.17) ---
+Cumulative damage on B: 30.00%
+
+Battleship survived all iterations. Final damage: 30.00%
