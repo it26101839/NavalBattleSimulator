@@ -1,0 +1,5 @@
+=== Part 1-B Simulation 1: Battleship Moving Path ===
+
+--- Iteration 1: B at (2.74, 69.43) ---
+Battleship SUNK by E1
+
