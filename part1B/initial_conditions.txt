@@ -1,11 +1,11 @@
 === Initial Battlefield Conditions ===
-Canvas size: 100.00 x 100.00
+Canvas size: 1000.00 x 1000.00
 
-Battleship: Type=U Pos=(50.00,50.00) Vmax=800.00
+Battleship: Type=U Pos=(500.00,500.00) Vmax=800.00
 
 Escort Ships:
-E1 | Type: C | Pos: (67.03, 33.94) | Vmax: 596.90 | Vmin: 11.50 | AngleMin: 2.38 | AngleMax: 27.38 | Impact: 0.07
-E2 | Type: E | Pos: (93.45, 87.35) | Vmax: 568.06 | Vmin: 98.21 | AngleMin: 16.01 | AngleMax: 86.01 | Impact: 0.04
-E3 | Type: B | Pos: (24.45, 44.00) | Vmax: 473.23 | Vmin: 381.12 | AngleMin: 12.13 | AngleMax: 42.13 | Impact: 0.06
-E4 | Type: D | Pos: (5.72, 4.42) | Vmax: 95.27 | Vmin: 18.07 | AngleMin: 5.79 | AngleMax: 55.79 | Impact: 0.05
-E5 | Type: B | Pos: (9.19, 61.82) | Vmax: 540.30 | Vmin: 181.68 | AngleMin: 22.85 | AngleMax: 52.85 | Impact: 0.06
+E1 | Type: D | Pos: (13.47, 545.03) | Vmax: 529.02 | Vmin: 203.57 | AngleMin: 27.59 | AngleMax: 77.59 | Impact: 0.05
+E2 | Type: C | Pos: (786.37, 449.30) | Vmax: 488.68 | Vmin: 121.09 | AngleMin: 8.51 | AngleMax: 33.51 | Impact: 0.07
+E3 | Type: A | Pos: (682.80, 573.11) | Vmax: 960.00 | Vmin: 325.03 | AngleMin: 14.05 | AngleMax: 34.05 | Impact: 0.08
+E4 | Type: A | Pos: (330.86, 287.16) | Vmax: 960.00 | Vmin: 401.69 | AngleMin: 16.25 | AngleMax: 36.25 | Impact: 0.08
+E5 | Type: C | Pos: (788.18, 658.70) | Vmax: 74.77 | Vmin: 74.25 | AngleMin: 21.97 | AngleMax: 46.97 | Impact: 0.07

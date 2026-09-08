@@ -11,10 +11,12 @@
 int main() {
     srand(time(NULL));
 
-    double D = 100.0;
+    double D = 1000.0;
     int N = 5;
     double vMaxB = 800.0;
-    int K = 5;   // katikama iterations gananaya
+    int K = 5;       // mulu iterations gananaya
+    int T = 2;       // gun jam wena iteration eka (T ta passe jam wenawa)
+    double thetaMin = 15.0;  // jam unaata passe minimum angle eka
 
     EscortShip escorts[N];
     initEscortShips(escorts, N, D, vMaxB);
@@ -24,47 +26,100 @@ int main() {
 
     saveInitialConditions("initial_conditions.txt", &b, escorts, N, D);
 
-    FILE *log = fopen("simulation1_log.txt", "w");
-    fprintf(log, "=== Part 1-B Simulation 1: Battleship Moving Path ===\n\n");
-
     int hitIds[100];
     double hitTimes[100];
     double totalTime;
     int bSunkBy;
-    int aliveCount = N;
+
+    // ============ SIMULATION 1 ============
+    FILE *log1 = fopen("simulation1_log.txt", "w");
+    fprintf(log1, "=== Part 1-B Simulation 1: Battleship Moving Path ===\n\n");
+
+    EscortShip escorts1[N];
+    for (int i = 0; i < N; i++) escorts1[i] = escorts[i];  // copy karagatta
+
+    Battleship b1 = b;
 
     for (int iter = 1; iter <= K; iter++) {
-        // B ekata random point ekak generate karanawa (path eke ekak)
-        b.x = ((double)rand() / RAND_MAX) * D;
-        b.y = ((double)rand() / RAND_MAX) * D;
+        b1.x = ((double)rand() / RAND_MAX) * D;
+        b1.y = ((double)rand() / RAND_MAX) * D;
 
-        printf("\n--- Iteration %d: B at (%.2f, %.2f) ---\n", iter, b.x, b.y);
-        fprintf(log, "--- Iteration %d: B at (%.2f, %.2f) ---\n", iter, b.x, b.y);
+        fprintf(log1, "--- Iteration %d: B at (%.2f, %.2f) ---\n", iter, b1.x, b1.y);
 
-        int hitCount = simulateAttack(&b, escorts, N, hitIds, hitTimes, &totalTime, &bSunkBy);
+        int hitCount = simulateAttack(&b1, escorts1, N, hitIds, hitTimes, &totalTime, &bSunkBy);
 
-        if (b.destroyed) {
-            printf("Battleship SUNK by E%d at iteration %d\n", bSunkBy, iter);
-            fprintf(log, "Battleship SUNK by E%d\n\n", bSunkBy);
+        if (b1.destroyed) {
+            fprintf(log1, "Battleship SUNK by E%d\n\n", bSunkBy);
             break;
         } else {
-            printf("B survives. E ships hit this round: %d\n", hitCount);
-            fprintf(log, "B survives. E ships hit: %d, time: %.4f s\n", hitCount, totalTime);
+            fprintf(log1, "B survives. E ships hit: %d, time: %.4f s\n", hitCount, totalTime);
             for (int i = 0; i < hitCount; i++) {
-                fprintf(log, "  E%d hit at t=%.4f s\n", hitIds[i], hitTimes[i]);
-                aliveCount--;
+                fprintf(log1, "  E%d hit at t=%.4f s\n", hitIds[i], hitTimes[i]);
             }
-            fprintf(log, "\n");
-        }
-
-        if (aliveCount <= 0) {
-            printf("All escort ships destroyed!\n");
-            fprintf(log, "All escort ships destroyed!\n");
-            break;
+            fprintf(log1, "\n");
         }
     }
+    fclose(log1);
+    printf("Simulation 1 done. Check simulation1_log.txt\n");
 
-    fclose(log);
+    // ============ SIMULATION 2 (Gun Jam) ============
+    FILE *log2 = fopen("simulation2_log.txt", "w");
+    fprintf(log2, "=== Part 1-B Simulation 2: Gun Jam after iteration %d ===\n\n", T);
+
+    EscortShip escorts2[N];
+    for (int i = 0; i < N; i++) escorts2[i] = escorts[i];  // eka initial conditions ekamai
+
+    Battleship b2 = b;
+    int jammed = 0;
+
+    for (int iter = 1; iter <= K; iter++) {
+        b2.x = ((double)rand() / RAND_MAX) * D;
+        b2.y = ((double)rand() / RAND_MAX) * D;
+
+        if (iter > T) jammed = 1;
+
+        fprintf(log2, "--- Iteration %d: B at (%.2f, %.2f) | Jammed: %s ---\n",
+                iter, b2.x, b2.y, jammed ? "YES" : "NO");
+
+        int hitCount = 0;
+        int localBSunkBy = -1;
+        double localTotalTime = 0.0;
+
+        for (int i = 0; i < N && localBSunkBy == -1; i++) {
+            if (escorts2[i].destroyed) continue;
+
+            if (isInRange(escorts2[i].x, escorts2[i].y, b2.x, b2.y, escorts2[i].vMax)) {
+                localBSunkBy = escorts2[i].id;
+                b2.destroyed = 1;
+                break;
+            }
+
+            int hitResult;
+            if (jammed) {
+                hitResult = isInRangeJammed(b2.x, b2.y, escorts2[i].x, escorts2[i].y, b2.vMax, thetaMin);
+            } else {
+                hitResult = isInRange(b2.x, b2.y, escorts2[i].x, escorts2[i].y, b2.vMax);
+            }
+
+            if (hitResult) {
+                escorts2[i].destroyed = 1;
+                double t = timeToHit(b2.vMax);
+                if (t > localTotalTime) localTotalTime = t;
+                hitCount++;
+                fprintf(log2, "  E%d hit at t=%.4f s\n", escorts2[i].id, t);
+            }
+        }
+
+        if (b2.destroyed) {
+            fprintf(log2, "Battleship SUNK by E%d\n\n", localBSunkBy);
+            break;
+        } else {
+            fprintf(log2, "B survives. E ships hit: %d\n\n", hitCount);
+        }
+    }
+    fclose(log2);
+    printf("Simulation 2 done. Check simulation2_log.txt\n");
+
     saveFinalResults("final_results.txt", &b, escorts, N, bSunkBy, 0, hitIds, hitTimes, totalTime);
 
     return 0;
