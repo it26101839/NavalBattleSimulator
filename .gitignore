@@ -1,0 +1,5 @@
+simulator
+*.o
+part1A/simulator
+part1B/simulator
+part1C/simulator
