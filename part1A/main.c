@@ -35,11 +35,13 @@ int main() {
     double hitTimes[100];
 
     for (int i = 0; i < N && bSunkBy == -1; i++) {
+        // Check if this E ship hits B first
         if (isInRange(escorts[i].x, escorts[i].y, b.x, b.y, escorts[i].vMax)) {
             bSunkBy = escorts[i].id;
             b.destroyed = 1;
             break;
         }
+        // If E missed, check if B hits this E ship
         if (isInRange(b.x, b.y, escorts[i].x, escorts[i].y, b.vMax)) {
             escorts[i].destroyed = 1;
 

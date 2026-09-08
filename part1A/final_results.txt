@@ -1,12 +1,12 @@
 === Final Battlefield Results ===
 
-Battleship SUNK by E2
+Battleship SUNK by E1
 
 Final state of all Escort Ships:
-E1 | Type: B | Pos: (884.96, 8.39) | Status: DESTROYED
-E2 | Type: E | Pos: (491.97, 999.98) | Status: ALIVE
-E3 | Type: C | Pos: (420.56, 379.16) | Status: ALIVE
-E4 | Type: C | Pos: (602.71, 693.53) | Status: ALIVE
-E5 | Type: C | Pos: (49.54, 445.71) | Status: ALIVE
+E1 | Type: C | Pos: (588.31, 531.74) | Status: ALIVE
+E2 | Type: E | Pos: (252.70, 223.18) | Status: ALIVE
+E3 | Type: C | Pos: (711.59, 248.52) | Status: ALIVE
+E4 | Type: C | Pos: (179.92, 837.75) | Status: ALIVE
+E5 | Type: E | Pos: (997.84, 267.56) | Status: ALIVE
 
 Battleship final status: DESTROYED
