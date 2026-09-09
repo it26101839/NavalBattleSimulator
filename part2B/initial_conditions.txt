@@ -1,0 +1,11 @@
+=== Initial Battlefield Conditions ===
+Canvas size: 1000.00 x 1000.00
+
+Battleship: Type=U Pos=(500.00,500.00) Vmax=800.00
+
+Escort Ships:
+E1 | Type: A | Pos: (689.92, 282.12) | Vmax: 960.00 | Vmin: 919.23 | AngleMin: 13.82 | AngleMax: 33.82 | Impact: 0.08
+E2 | Type: C | Pos: (668.43, 755.06) | Vmax: 5.78 | Vmin: 0.23 | AngleMin: 13.24 | AngleMax: 38.24 | Impact: 0.07
+E3 | Type: D | Pos: (389.51, 384.04) | Vmax: 170.76 | Vmin: 90.69 | AngleMin: 11.96 | AngleMax: 61.96 | Impact: 0.05
+E4 | Type: D | Pos: (44.13, 845.31) | Vmax: 577.52 | Vmin: 99.87 | AngleMin: 15.12 | AngleMax: 65.12 | Impact: 0.05
+E5 | Type: E | Pos: (296.85, 855.70) | Vmax: 606.31 | Vmin: 556.33 | AngleMin: 16.74 | AngleMax: 86.74 | Impact: 0.04
