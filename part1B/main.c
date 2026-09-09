@@ -14,9 +14,9 @@ int main() {
     double D = 1000.0;
     int N = 5;
     double vMaxB = 800.0;
-    int K = 5;       // mulu iterations gananaya
-    int T = 2;       // gun jam wena iteration eka (T ta passe jam wenawa)
-    double thetaMin = 15.0;  // jam unaata passe minimum angle eka
+    int K = 5;                // total number of iterations
+    int T = 2;                // iteration after which the gun jams
+    double thetaMin = 15.0;   // minimum angle allowed after jam
 
     EscortShip escorts[N];
     initEscortShips(escorts, N, D, vMaxB);
@@ -36,7 +36,7 @@ int main() {
     fprintf(log1, "=== Part 1-B Simulation 1: Battleship Moving Path ===\n\n");
 
     EscortShip escorts1[N];
-    for (int i = 0; i < N; i++) escorts1[i] = escorts[i];  // copy karagatta
+    for (int i = 0; i < N; i++) escorts1[i] = escorts[i];  // copy of the original state
 
     Battleship b1 = b;
 
@@ -67,7 +67,7 @@ int main() {
     fprintf(log2, "=== Part 1-B Simulation 2: Gun Jam after iteration %d ===\n\n", T);
 
     EscortShip escorts2[N];
-    for (int i = 0; i < N; i++) escorts2[i] = escorts[i];  // eka initial conditions ekamai
+    for (int i = 0; i < N; i++) escorts2[i] = escorts[i];  // same initial conditions
 
     Battleship b2 = b;
     int jammed = 0;

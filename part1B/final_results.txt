@@ -7,10 +7,10 @@ Total time taken to end battle: 0.0000 seconds
 Details of E ships hit by B:
 
 Final state of all Escort Ships:
-E1 | Type: D | Pos: (13.47, 545.03) | Status: ALIVE
-E2 | Type: C | Pos: (786.37, 449.30) | Status: ALIVE
-E3 | Type: A | Pos: (682.80, 573.11) | Status: ALIVE
-E4 | Type: A | Pos: (330.86, 287.16) | Status: ALIVE
-E5 | Type: C | Pos: (788.18, 658.70) | Status: ALIVE
+E1 | Type: C | Pos: (709.73, 394.14) | Status: ALIVE
+E2 | Type: C | Pos: (638.37, 606.66) | Status: ALIVE
+E3 | Type: B | Pos: (915.43, 770.63) | Status: ALIVE
+E4 | Type: C | Pos: (695.74, 523.12) | Status: ALIVE
+E5 | Type: D | Pos: (829.58, 681.49) | Status: ALIVE
 
 Battleship final status: ALIVE

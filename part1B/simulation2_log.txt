@@ -1,5 +1,5 @@
 === Part 1-B Simulation 2: Gun Jam after iteration 2 ===
 
---- Iteration 1: B at (994.86, 616.18) | Jammed: NO ---
+--- Iteration 1: B at (264.02, 488.53) | Jammed: NO ---
 Battleship SUNK by E1
 
