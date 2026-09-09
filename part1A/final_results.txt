@@ -3,10 +3,10 @@
 Battleship SUNK by E1
 
 Final state of all Escort Ships:
-E1 | Type: C | Pos: (588.31, 531.74) | Status: ALIVE
-E2 | Type: E | Pos: (252.70, 223.18) | Status: ALIVE
-E3 | Type: C | Pos: (711.59, 248.52) | Status: ALIVE
-E4 | Type: C | Pos: (179.92, 837.75) | Status: ALIVE
-E5 | Type: E | Pos: (997.84, 267.56) | Status: ALIVE
+E1 | Type: C | Pos: (573.81, 371.43) | Status: ALIVE
+E2 | Type: E | Pos: (686.31, 956.08) | Status: ALIVE
+E3 | Type: E | Pos: (963.60, 723.27) | Status: ALIVE
+E4 | Type: A | Pos: (540.87, 53.92) | Status: ALIVE
+E5 | Type: E | Pos: (466.47, 455.97) | Status: ALIVE
 
 Battleship final status: DESTROYED

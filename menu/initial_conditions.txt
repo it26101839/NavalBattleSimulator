@@ -4,8 +4,8 @@ Canvas size: 100.00 x 100.00
 Battleship: Type=U Pos=(50.00,50.00) Vmax=800.00
 
 Escort Ships:
-E1 | Type: B | Pos: (31.94, 80.24) | Vmax: 703.10 | Vmin: 265.25 | AngleMin: 21.64 | AngleMax: 51.64 | Impact: 0.06
-E2 | Type: B | Pos: (5.53, 86.48) | Vmax: 208.34 | Vmin: 81.30 | AngleMin: 26.31 | AngleMax: 56.31 | Impact: 0.06
-E3 | Type: D | Pos: (66.85, 48.96) | Vmax: 178.48 | Vmin: 153.42 | AngleMin: 6.42 | AngleMax: 56.42 | Impact: 0.05
-E4 | Type: E | Pos: (63.61, 41.80) | Vmax: 95.66 | Vmin: 67.78 | AngleMin: 29.85 | AngleMax: 99.85 | Impact: 0.04
-E5 | Type: A | Pos: (76.36, 84.01) | Vmax: 960.00 | Vmin: 184.51 | AngleMin: 17.84 | AngleMax: 37.84 | Impact: 0.08
+E1 | Type: A | Pos: (66.55, 99.42) | Vmax: 960.00 | Vmin: 584.91 | AngleMin: 29.48 | AngleMax: 49.48 | Impact: 0.08
+E2 | Type: A | Pos: (89.64, 96.71) | Vmax: 960.00 | Vmin: 937.45 | AngleMin: 6.25 | AngleMax: 26.25 | Impact: 0.08
+E3 | Type: D | Pos: (12.82, 19.73) | Vmax: 282.73 | Vmin: 77.52 | AngleMin: 24.02 | AngleMax: 74.02 | Impact: 0.05
+E4 | Type: D | Pos: (71.31, 10.61) | Vmax: 657.39 | Vmin: 499.29 | AngleMin: 10.06 | AngleMax: 60.06 | Impact: 0.05
+E5 | Type: D | Pos: (28.49, 31.88) | Vmax: 161.96 | Vmin: 69.06 | AngleMin: 1.29 | AngleMax: 51.29 | Impact: 0.05

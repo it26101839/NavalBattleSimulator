@@ -1,23 +1,23 @@
 === Part 1-C Simulation 2: Gun Jam after iteration 2 (with % damage) ===
 
---- Iteration 1: B at (642.90, 819.29) | Jammed: NO ---
+--- Iteration 1: B at (843.68, 76.82) | Jammed: NO ---
   E1 hit at t=115.3283 s
   E2 hit at t=115.3283 s
   E3 hit at t=115.3283 s
   E4 hit at t=115.3283 s
   E5 hit at t=115.3283 s
-Cumulative damage on B: 30.00%
+Cumulative damage on B: 20.00%
 
---- Iteration 2: B at (765.00, 796.47) | Jammed: NO ---
-Cumulative damage on B: 30.00%
+--- Iteration 2: B at (381.34, 180.03) | Jammed: NO ---
+Cumulative damage on B: 20.00%
 
---- Iteration 3: B at (979.19, 383.70) | Jammed: YES ---
-Cumulative damage on B: 30.00%
+--- Iteration 3: B at (708.14, 344.94) | Jammed: YES ---
+Cumulative damage on B: 20.00%
 
---- Iteration 4: B at (737.20, 520.97) | Jammed: YES ---
-Cumulative damage on B: 30.00%
+--- Iteration 4: B at (903.29, 289.98) | Jammed: YES ---
+Cumulative damage on B: 20.00%
 
---- Iteration 5: B at (752.61, 952.07) | Jammed: YES ---
-Cumulative damage on B: 30.00%
+--- Iteration 5: B at (283.26, 214.74) | Jammed: YES ---
+Cumulative damage on B: 20.00%
 
-Battleship survived all iterations. Final damage: 30.00%
+Battleship survived all iterations. Final damage: 20.00%

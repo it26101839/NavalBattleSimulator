@@ -2,27 +2,27 @@
 Battleship firing interval (TB): 2.50 s
 
 Attack order for B (closest to farthest):
-  1. E3 (Type D) - distance: 160.17 - TE: 4.00
-  2. E1 (Type A) - distance: 289.04 - TE: 3.00
-  3. E2 (Type C) - distance: 305.65 - TE: 2.00
-  4. E5 (Type E) - distance: 409.63 - TE: 5.00
-  5. E4 (Type D) - distance: 571.89 - TE: 4.00
+  1. E3 (Type E) - distance: 230.86 - TE: 5.00
+  2. E4 (Type C) - distance: 266.84 - TE: 2.00
+  3. E1 (Type D) - distance: 319.46 - TE: 4.00
+  4. E5 (Type A) - distance: 487.75 - TE: 3.00
+  5. E2 (Type D) - distance: 561.41 - TE: 4.00
 
 --- Simulation timeline ---
-Time 0.00 s: E3 fires and hits B. Cumulative damage: 5.00%
-Time 0.00 s: E1 fires and hits B. Cumulative damage: 13.00%
-Time 0.00 s: E5 fires and hits B. Cumulative damage: 17.00%
-Time 0.00 s: E4 fires and hits B. Cumulative damage: 22.00%
+Time 0.00 s: E3 fires and hits B. Cumulative damage: 4.00%
+Time 0.00 s: E5 fires and hits B. Cumulative damage: 12.00%
+Time 0.00 s: E2 fires and hits B. Cumulative damage: 17.00%
 Time 0.00 s: B fires and destroys E3
-Time 2.50 s: B fires and destroys E1
-Time 4.00 s: E4 fires and hits B. Cumulative damage: 27.00%
-Time 5.00 s: E5 fires and hits B. Cumulative damage: 31.00%
-Time 5.00 s: B fires and destroys E2
+Time 2.50 s: B fires and destroys E4
+Time 3.00 s: E5 fires and hits B. Cumulative damage: 25.00%
+Time 4.00 s: E2 fires and hits B. Cumulative damage: 30.00%
+Time 5.00 s: B fires and destroys E1
+Time 6.00 s: E5 fires and hits B. Cumulative damage: 38.00%
 Time 7.50 s: B fires and destroys E5
-Time 8.00 s: E4 fires and hits B. Cumulative damage: 36.00%
-Time 10.00 s: B fires and destroys E4
+Time 8.00 s: E2 fires and hits B. Cumulative damage: 43.00%
+Time 10.00 s: B fires and destroys E2
 
 === Summary ===
 Battleship survived until simulation ended.
 Total E ships destroyed by B: 5
-Final damage on B: 36.00%
+Final damage on B: 43.00%
