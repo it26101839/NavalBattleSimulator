@@ -14,9 +14,9 @@ int main() {
     double D = 1000.0;
     int N = 5;
     double vMaxB = 800.0;
-    int K = 5;                // mulu iterations gananaya
-    int T = 2;                // gun jam wena iteration eka (Simulation 2)
-    double thetaMin = 15.0;   // jam unaata passe minimum angle eka
+    int K = 5;                // total number of iterations
+    int T = 2;                // iteration after which gun jams (Simulation 2)
+    double thetaMin = 15.0;   // minimum angle allowed after jam
 
     EscortShip escortsOriginal[N];
     initEscortShips(escortsOriginal, N, D, vMaxB);
