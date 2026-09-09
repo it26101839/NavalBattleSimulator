@@ -1,0 +1,37 @@
+=== Simulation: Continuous Firing for Escort Ships ===
+Battleship firing interval (TB): 2.50 s
+
+Attack order for B (closest to farthest):
+  1. E4 (Type E) - distance: 15.89 - TE: 5.00
+  2. E3 (Type D) - distance: 16.88 - TE: 4.00
+  3. E1 (Type B) - distance: 35.22 - TE: 1.50
+  4. E5 (Type A) - distance: 43.03 - TE: 3.00
+  5. E2 (Type B) - distance: 57.52 - TE: 1.50
+
+--- Simulation timeline ---
+Time 0.00 s: E4 fires and hits B. Cumulative damage: 4.00%
+Time 0.00 s: E3 fires and hits B. Cumulative damage: 9.00%
+Time 0.00 s: E1 fires and hits B. Cumulative damage: 15.00%
+Time 0.00 s: E5 fires and hits B. Cumulative damage: 23.00%
+Time 0.00 s: E2 fires and hits B. Cumulative damage: 29.00%
+Time 0.00 s: B fires and destroys E4
+Time 1.50 s: E1 fires and hits B. Cumulative damage: 35.00%
+Time 1.50 s: E2 fires and hits B. Cumulative damage: 41.00%
+Time 2.50 s: B fires and destroys E3
+Time 3.00 s: E1 fires and hits B. Cumulative damage: 47.00%
+Time 3.00 s: E5 fires and hits B. Cumulative damage: 55.00%
+Time 3.00 s: E2 fires and hits B. Cumulative damage: 61.00%
+Time 4.50 s: E1 fires and hits B. Cumulative damage: 67.00%
+Time 4.50 s: E2 fires and hits B. Cumulative damage: 73.00%
+Time 5.00 s: B fires and destroys E1
+Time 6.00 s: E5 fires and hits B. Cumulative damage: 81.00%
+Time 6.00 s: E2 fires and hits B. Cumulative damage: 87.00%
+Time 7.50 s: E2 fires and hits B. Cumulative damage: 93.00%
+Time 7.50 s: B fires and destroys E5
+Time 9.00 s: E2 fires and hits B. Cumulative damage: 99.00%
+Time 10.00 s: B fires and destroys E2
+
+=== Summary ===
+Battleship survived until simulation ended.
+Total E ships destroyed by B: 5
+Final damage on B: 99.00%
