@@ -1,8 +1,8 @@
 #include "ships.h"
 #include "physics.h"
 
-// Part 1-C: E ekaka attack ekakin B ta % damage ekak witharai wenne
-// bDamage eka cumulative damage eka (0.0 idan 1.0 wenakan)
+// Part 1-C: A single E ship attack only reduces B by a percentage
+// bDamage is cumulative damage on B (0.0 to 1.0)
 int simulateAttackPercent(Battleship *b, EscortShip escorts[], int n,
                            int hitIds[], double hitTimes[], double *totalTime,
                            double *bDamage) {

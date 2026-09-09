@@ -15,7 +15,7 @@ int main() {
     double D = 1000.0;
     int N = 5;
     double vMaxB = 800.0;
-    double TB = 2.5;   // B ge firing interval eka (seconds), user input/random wenna puluwan
+    double TB = 2.5;   // battleship firing interval (seconds), can be user input/random
 
     EscortShip escorts[N];
     initEscortShips(escorts, N, D, vMaxB);
@@ -29,8 +29,8 @@ int main() {
     fprintf(log, "=== Part 2-A: Firing Interval + Attack Order Strategy ===\n");
     fprintf(log, "Battleship firing interval (TB): %.2f s\n\n", TB);
 
-    // Strategy: B range ekata E ships close ewata anuwa sort karanawa
-    // (closest ekata kalin attack karanawa - simple strategy)
+    // Strategy: sort E ships by distance from B
+    // (attack the closest one first - simple strategy)
     sortByDistance(escorts, N, b.x, b.y);
 
     fprintf(log, "Attack order (closest to farthest):\n");
@@ -49,7 +49,7 @@ int main() {
     for (int i = 0; i < N; i++) {
         if (escorts[i].destroyed) continue;
 
-        // E ekak B ta hit karanawada balanawa (kalinma)
+        // Check if this E ship hits B first
         if (isInRange(escorts[i].x, escorts[i].y, b.x, b.y, escorts[i].vMax)) {
             bDamage += escorts[i].impactPower;
             fprintf(log, "E%d hits B! Cumulative damage: %.2f%%\n", escorts[i].id, bDamage * 100);
@@ -60,7 +60,7 @@ int main() {
             }
         }
 
-        // B eka attack order eken E ekata fire karanawa
+        // B fires at E ship following the attack order
         if (isInRange(b.x, b.y, escorts[i].x, escorts[i].y, b.vMax)) {
             escorts[i].destroyed = 1;
             hitCount++;
@@ -69,7 +69,7 @@ int main() {
             fprintf(log, "Time %.2f s: B fires at E%d but misses (out of range)\n", currentTime, escorts[i].id);
         }
 
-        currentTime += TB;  // 襤ext shot ekata kalin interval eka enawa
+        currentTime += TB;  // wait for the firing interval before next shot
     }
 
     fprintf(log, "\n=== Summary ===\n");
